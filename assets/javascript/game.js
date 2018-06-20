@@ -36,15 +36,21 @@ var losses = 0;
 
 var startGame = function () {
     var current = 0;
-    var target = Math.floor(Math.random() * (120 - 19 + 1))
+    //var target = Math.floor(Math.random() * (120 - 19 + 1))
 }
 
-target = Math.floor(Math.random() * 12) + 19;
+target = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 
-crystals.red.value = Math.floor(Math.random() * 12) + 19;
-crystals.yellow.value = Math.floor(Math.random() * 12) + 19;
-crystals.blue.value = Math.floor(Math.random() * 12) + 19;
-crystals.green.value = Math.floor(Math.random() * 12) + 19;
+crystals.red.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+crystals.yellow.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+crystals.blue.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+crystals.green.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+
+console.log("red " + crystals.red.value)
+console.log("yellow " + crystals.yellow.value)
+console.log("blue " + crystals.blue.value)
+console.log("green " + crystals.green.value)
+
 
 $("#current").html(current);
 
