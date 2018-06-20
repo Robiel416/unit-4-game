@@ -60,12 +60,12 @@ var add = function (crystals) {
 
 //User actions
 $("#red").on("click", function () {
-    add(crystals.red.value);
+    add(crystals.red);
 });
 
 $("#yellow").on("click", function () {
 
-    add(crystals.yellow.value);
+    add(crystals.yellow);
 });
 
 $("#blue").on("click", function () {
