@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-    <script src="./assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -32,37 +33,38 @@
     </div>
     <div class="row">
         <div class="col-lg-6">
-                <div class="target">
+            <div class="target">
                 <h3>Target</h3>
-                <p>#placeholder</p>
-                </div>
+                <h3 id="target"></h3>
+            </div>
         </div>
         <div class="col-lg-6">
             <div class="current">
                 <h3>Current Score</h3>
-                <p>#placeholder</p>
+                <h3 id="current"></h3>
+
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-3">
-            <div class="crystal" id="red">
-                <img src="./assets/images/red.png" alt="redcrystal"/>
+            <div class="crystal">
+                <img src="./assets/images/red.png" alt="redcrystal" id="red">
             </div>
         </div>
         <div class="col-lg-3">
-            <div class="crystal" id="yellow">
-                <img src="./assets/images/yellow.png" alt="yellowcrystal" />
+            <div class="crystal">
+                <img src="./assets/images/yellow.png" alt="yellowcrystal" id="yellow">
             </div>
         </div>
         <div class="col-lg-3">
-            <div class="crystal" id="blue">
-                <img src="./assets/images/blue.png" alt="bluecrystal"/>
+            <div class="crystal">
+                <img src="./assets/images/blue.png" alt="bluecrystal" id="blue">
             </div>
         </div>
         <div class="col-lg-3">
-            <div class="crystal" id="green">
-                <img src="./assets/images/green.png" alt="greencrystal" />
+            <div class="crystal">
+                <img src="./assets/images/green.png" alt="greencrystal" id="green">
             </div>
         </div>
     </div>
@@ -81,7 +83,7 @@
         </div>
     </div>
     </div>
-
+    <script src="./assets/javascript/game.js"></script>
 </body>
 
 </html>

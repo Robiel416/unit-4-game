@@ -1,4 +1,4 @@
-//All of my global variables
+//All of my variables
 
 var target = 0;
 
@@ -6,22 +6,25 @@ var current = 0;
 
 var crystals = {
     red:
-    {
-        name: "Red",
-        value: 0
-    },
+        {
+            name: "Red",
+            value: 0
+        },
     yellow:
-    {
-        name: "Yellow",
-        value: 0
-    },
-    Green:
-    {
-        name: "Green",
-        value: 0
-    },
-    Blue: "Blue",
-    value: 0
+        {
+            name: "Yellow",
+            value: 0
+        },
+    green:
+        {
+            name: "Green",
+            value: 0
+        },
+    blue:
+        {
+            name: "Blue",
+            value: 0
+        },
 };
 
 var wins = 0;
@@ -31,9 +34,9 @@ var losses = 0;
 
 //All my functions
 
-var startGame = function() {
+var startGame = function () {
     var current = 0;
-    var target = Math.floor(Math.random()*(120-19+1))
+    var target = Math.floor(Math.random() * (120 - 19 + 1))
 }
 
 target = Math.floor(Math.random() * 12) + 19;
@@ -47,27 +50,30 @@ $("#current").html(current);
 
 $("#target").html(target);
 
-var input = function(crystals) {
-    currrent = current + crystals.value;
+var add = function (crystals) {
+    current = current + crystals.value;
+
+    $("#current").html(current);
 }
 
 
+
 //User actions
-$("#red").click(function() {
-   input(crystals.red)
+$("#red").on("click", function () {
+    add(crystals.red.value);
 });
 
-$("#Yellow").click(function() {
-    alert("test");
-    input(crystals.yellow)
+$("#yellow").on("click", function () {
+
+    add(crystals.yellow.value);
 });
 
-$("#Blue").click(function() {
-    alert("test");
-    input(crystals.blue)
+$("#blue").on("click", function () {
+
+    add(crystals.blue);
 });
 
-$("#Green").click(function() {
-    alert("test");
-    input(crystals.green)
+$("#green").on("click", function () {
+
+    add(crystals.green);
 });
