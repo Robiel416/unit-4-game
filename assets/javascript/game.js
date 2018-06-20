@@ -46,11 +46,6 @@ crystals.yellow.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 crystals.blue.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 crystals.green.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 
-console.log("red " + crystals.red.value)
-console.log("yellow " + crystals.yellow.value)
-console.log("blue " + crystals.blue.value)
-console.log("green " + crystals.green.value)
-
 
 $("#current").html(current);
 
@@ -62,7 +57,22 @@ var add = function (crystals) {
     $("#current").html(current);
 }
 
+var gameRules = function () {
 
+    if (current > target) {
+        alert("You lose.");
+        console.log("Your lose ");
+
+        losses++;
+    }
+    else if (current == target) {
+        alert("You win.");
+        console.log("you win.");
+
+        wins++;
+    }
+
+}
 
 //User actions
 $("#red").on("click", function () {
