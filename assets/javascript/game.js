@@ -70,14 +70,22 @@ $("#current").html(current);
 
 $("#target").html(target);
 
-$("#wins").html(wins);
 
-$("#losses").html(losses);
+
+
 
 var add = function (crystals) {
     current = current + crystals.value;
 
     $("#current").html(current);
+
+    gameRules();
+
+    $("#wins").html(wins);
+
+    $("#losses").html(losses);
+
+    startGame();
 
     
 }
@@ -87,15 +95,13 @@ var gameRules = function () {
     if (current == target) {
         wins++;
         alert("You win.");
-        
+
     }
     else if (current > target) {
         losses++;
         alert("You lose.");
-       
-    }
 
-    gameRules();
+    }
 }
 
 
