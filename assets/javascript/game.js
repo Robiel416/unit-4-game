@@ -31,6 +31,25 @@ var wins = 0;
 
 var losses = 0;
 
+$("#red").on("click", function () {
+    add(crystals.red);
+});
+
+$("#yellow").on("click", function () {
+
+    add(crystals.yellow);
+});
+
+$("#blue").on("click", function () {
+
+    add(crystals.blue);
+});
+
+$("#green").on("click", function () {
+
+    add(crystals.green);
+});
+
 
 //All my functions
 
@@ -51,45 +70,33 @@ $("#current").html(current);
 
 $("#target").html(target);
 
+$("#wins").html(wins);
+
+$("#losses").html(losses);
+
 var add = function (crystals) {
     current = current + crystals.value;
 
     $("#current").html(current);
+
+    
 }
 
 var gameRules = function () {
 
-    if (current > target) {
-        alert("You lose.");
-        console.log("Your lose ");
-
-        losses++;
-    }
-    else if (current == target) {
-        alert("You win.");
-        console.log("you win.");
-
+    if (current == target) {
         wins++;
+        alert("You win.");
+        
+    }
+    else if (current > target) {
+        losses++;
+        alert("You lose.");
+       
     }
 
+    gameRules();
 }
 
-//User actions
-$("#red").on("click", function () {
-    add(crystals.red);
-});
 
-$("#yellow").on("click", function () {
 
-    add(crystals.yellow);
-});
-
-$("#blue").on("click", function () {
-
-    add(crystals.blue);
-});
-
-$("#green").on("click", function () {
-
-    add(crystals.green);
-});
